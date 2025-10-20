@@ -1,7 +1,7 @@
 # app.py
 # CTF challenge: require X-Forwarded-For IP to match allowed list AND
 # User-Agent to be exactly "SDC". Hints in HTML comments (view-source).
-# Flag: CTF{RIYADH_SPOOF_21}
+# Flag: SDC{RIYADH_SPOOF_21}
 
 from flask import Flask, render_template_string, request
 from datetime import datetime, timezone
@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 # configuration
 CONFIG = {
-    "flag": "CTF{RIYADH_SPOOF_21}",
+    "flag": "SDC{RIYADH_SPOOF_21}",
     "riyadh_cidr_list": ["212.107.116.238/32"],  # allowed IP (single IP)
     "required_user_agent": "SDC"                  # exact match required
 }
@@ -109,3 +109,4 @@ if __name__ == '__main__':
     print("Starting CTF app on http://127.0.0.1:5000")
 
     app.run(host='0.0.0.0', port=5000, debug=False)
+
