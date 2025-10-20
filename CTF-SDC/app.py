@@ -49,7 +49,6 @@ small.debug{display:block;margin-top:12px;color:rgba(255,255,255,0.45);font-size
         <!-- Hint: set X-Forwarded-For to a Riyadh IP (e.g. 212.***.***.***) and set User-Agent to "SDC" -->
       {% endif %}
 
-      <small class="debug">Remote address: {{ remote_addr }}</small>
     </div>
   </div>
 </body>
@@ -108,4 +107,5 @@ def index():
 
 if __name__ == '__main__':
     print("Starting CTF app on http://127.0.0.1:5000")
+
     app.run(host='0.0.0.0', port=5000, debug=False)
